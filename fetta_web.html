@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FETTA — Salame de chocolate artesanal</title>
+  <meta name="description" content="Fetta — Salame de chocolate artesanal. Pensado para compartir en un café, regalar o disfrutar por sí mismo. Compra por WhatsApp." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --beige: #f5efe6;
+      --cream: #fbf7f2;
+      --brown: #6b4a3a;
+      --brown-dark: #4a3528;
+      --radius: 18px;
+      --max-width: 1000px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:var(--cream);
+      color:var(--brown-dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    .container{max-width:var(--max-width);margin:0 auto;padding:48px 28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+    .logo{font-family:'Playfair Display';font-size:22px;letter-spacing:4px;color:var(--brown);}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center;padding:36px 0}
+    .hero .eyebrow{font-size:14px;color:var(--brown-dark);opacity:.8}
+    .hero h1{font-family:'Playfair Display';font-size:40px;margin:12px 0 18px;color:var(--brown-dark)}
+    .hero p{max-width:48ch;margin:0 0 22px;color:var(--brown-dark);opacity:.9}
+
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:600;
+      background:linear-gradient(90deg,var(--brown) 0%, #5b402f 100%);color:var(--cream);box-shadow:0 6px 18px rgba(74,53,40,0.08);
+    }
+
+    .hero-figure{
+      background:var(--beige);border-radius:18px;padding:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(74,53,40,0.06);
+    }
+    .hero-figure img{width:100%;height:auto;display:block;border-radius:12px;object-fit:cover}
+
+    /* Sections */
+    section{padding:48px 0;border-top:1px solid rgba(74,53,40,0.04)}
+    h2{font-family:'Playfair Display';font-size:24px;margin:0 0 12px;color:var(--brown)}
+    .lead{max-width:66ch;color:var(--brown-dark);opacity:.95}
+
+    /* Product */
+    .product{display:flex;gap:36px;align-items:center}
+    .product-figure{flex:0 0 340px}
+    .product-info{flex:1}
+    .product .desc{margin:12px 0 18px;color:var(--brown-dark)}
+
+    /* How to buy */
+    .steps{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px}
+    .step{background:transparent;border-radius:12px;padding:16px;flex:1;min-width:180px}
+    .step .num{font-weight:700;background:var(--beige);width:36px;height:36px;border-radius:12px;display:inline-grid;place-items:center;color:var(--brown)}
+
+    /* Contact */
+    .contact-list{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px}
+    .contact-item{display:flex;align-items:center;gap:12px}
+
+    footer{padding:28px 0;text-align:center;color:var(--brown-dark);opacity:.8}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .product{flex-direction:column}
+      .hero-figure{order:2}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">FETTA</div>
+      <nav aria-label="Principal">
+        <a href="#producto" style="text-decoration:none;color:var(--brown-dark);font-weight:600;">Producto</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <main class="hero" role="main">
+      <div>
+        <div class="eyebrow">Salame de chocolate</div>
+        <h1>Salame de chocolate artesanal</h1>
+        <p>Pensado para compartir en un café, regalar en un momento especial o simplemente disfrutarlo por sí mismo.</p>
+
+        <!-- WhatsApp button - replace PHONE_NUMBER -->
+        <a class="btn" href="https://wa.me/1234567890?text=Hola%20Fetta%20quiero%20pedir%20un%20salame" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <path d="M20.5 3.5L3.5 20.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.2"/>
+          </svg>
+          Comprar por WhatsApp
+        </a>
+      </div>
+
+      <figure class="hero-figure" aria-hidden>
+        <!-- Replace with real photo: hero.jpg -->
+        <img src="/assets/hero.jpg" alt="Salame de chocolate Fetta sobre mesa de café" />
+      </figure>
+    </main>
+
+    <!-- SOBRE LA MARCA -->
+    <section id="historia">
+      <h2>Nuestra historia</h2>
+      <p class="lead">Fetta nace del deseo de transformar un clásico en una experiencia. Cada salame de chocolate se elabora de forma artesanal, cuidando los ingredientes, el sabor y los detalles. Creemos en los momentos simples, compartidos y auténticos.</p>
+      <div style="margin-top:16px;max-width:720px;">
+        <img src="/assets/workshop.jpg" alt="Manos preparando salame de chocolate" style="width:100%;border-radius:12px;display:block;object-fit:cover" />
+      </div>
+    </section>
+
+    <!-- PRODUCTO / ELIGE TU FETTA -->
+    <section id="producto">
+      <h2>Elige tu Fetta</h2>
+      <p class="lead">Tres tamaños, el mismo cuidado artesanal. Pensados para distintos momentos de disfrute.</p>
+
+      <div class="steps" style="margin-top:32px;">
+        <!-- GRAN FETTA -->
+        <div class="step" style="background:var(--beige);border-radius:18px;">
+          <h3 style="font-family:'Playfair Display';margin-top:0;color:var(--brown)">FETTA · Gran Fetta</h3>
+          <div style="font-size:14px;opacity:.8;margin-bottom:8px;">450 g</div>
+          <p style="font-size:15px;">Pensado para compartir sin apuro. Ideal para reuniones, celebraciones o como regalo especial.</p>
+          <a class="btn" href="https://wa.me/1234567890?text=Hola%20Fetta%20quiero%20pedir%20una%20Gran%20Fetta" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+        </div>
+
+        <!-- FETTA CLÁSICA -->
+        <div class="step" style="background:var(--beige);border-radius:18px;">
+          <h3 style="font-family:'Playfair Display';margin-top:0;color:var(--brown)">FETTA · Fetta Clásica</h3>
+          <div style="font-size:14px;opacity:.8;margin-bottom:8px;">225 g</div>
+          <p style="font-size:15px;">El equilibrio perfecto entre compartir y disfrutar. Ideal para una merienda o un regalo con intención.</p>
+          <a class="btn" href="https://wa.me/1234567890?text=Hola%20Fetta%20quiero%20pedir%20una%20Fetta%20Clásica" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+        </div>
+
+        <!-- PICCOLA FETTA -->
+        <div class="step" style="background:var(--beige);border-radius:18px;">
+          <h3 style="font-family:'Playfair Display';margin-top:0;color:var(--brown)">FETTA · Piccola Fetta</h3>
+          <div style="font-size:14px;opacity:.8;margin-bottom:8px;">112 g</div>
+          <p style="font-size:15px;">Una pequeña porción para darse un gusto. Perfecta para acompañar un café o como detalle delicado.</p>
+          <a class="btn" href="https://wa.me/1234567890?text=Hola%20Fetta%20quiero%20pedir%20una%20Piccola%20Fetta" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INGREDIENTES -->
+    <section id="ingredientes">
+      <h2>Ingredientes</h2>
+      <p class="lead">Elaborado con ingredientes seleccionados: chocolate, galleta, manteca, azúcar y cacao. Sin conservantes artificiales, respetando el proceso artesanal.</p>
+      <ul style="list-style:none;padding:0;display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;">
+        <li style="background:var(--beige);padding:12px 16px;border-radius:999px;">Chocolate</li>
+        <li style="background:var(--beige);padding:12px 16px;border-radius:999px;">Galleta</li>
+        <li style="background:var(--beige);padding:12px 16px;border-radius:999px;">Manteca</li>
+        <li style="background:var(--beige);padding:12px 16px;border-radius:999px;">Azúcar</li>
+        <li style="background:var(--beige);padding:12px 16px;border-radius:999px;">Cacao</li>
+      </ul>
+    </section>
+
+    <!-- COMO COMPRAR -->
+    <section id="como-comprar">
+      <h2>Cómo comprar</h2>
+      <div class="steps">
+        <div class="step">
+          <div style="display:flex;gap:12px;align-items:center;"><div class="num">1</div><div><strong>Escríbenos por WhatsApp</strong><div style="font-size:14px;opacity:.9">Dinos qué te gustaría pedir y la fecha.</div></div></div>
+        </div>
+        <div class="step">
+          <div style="display:flex;gap:12px;align-items:center;"><div class="num">2</div><div><strong>Confirmamos disponibilidad</strong><div style="font-size:14px;opacity:.9">Te contamos tiempos y opciones de empaque.</div></div></div>
+        </div>
+        <div class="step">
+          <div style="display:flex;gap:12px;align-items:center;"><div class="num">3</div><div><strong>Coordinamos entrega</strong><div style="font-size:14px;opacity:.9">Retiro o entrega a domicilio según tu zona.</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="contact-list">
+        <div class="contact-item"><strong>WhatsApp:</strong> <a href="https://wa.me/1234567890?text=Hola%20Fetta" target="_blank" rel="noopener noreferrer">+39 123 456 7890</a></div>
+        <div class="contact-item"><strong>Instagram:</strong> <a href="https://instagram.com/tu_usuario" target="_blank" rel="noopener noreferrer">@fetta</a></div>
+        <div class="contact-item"><strong>Email:</strong> <a href="mailto:hola@fetta.example">hola@fetta.example</a></div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="font-family:'Playfair Display';font-size:14px;margin-bottom:8px">FETTA</div>
+      <div style="font-size:13px;">Salame de chocolate artesanal — Hecho con cariño</div>
+    </footer>
+  </div>
+
+</body>
+</html>
