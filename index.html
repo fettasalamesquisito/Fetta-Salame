@@ -9,13 +9,13 @@
 
 <style>
 :root{
-  --beige:#F6F1EA;
   --crema:#FBF8F4;
+  --beige:#F3ECE3;
   --marron:#5B3A29;
   --marron-suave:#7A5A48;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
   font-family:'Inter',sans-serif;
@@ -24,33 +24,38 @@ body{
   line-height:1.6;
 }
 
-/* --------- GENERAL --------- */
+/* -------- GENERAL -------- */
 section{
   padding:100px 24px;
 }
+
+.bg-beige{background:var(--beige)}
+.bg-crema{background:var(--crema)}
 
 .container{
   max-width:1100px;
   margin:auto;
 }
 
-h2{
+h1,h2{
   font-family:'Playfair Display',serif;
+}
+
+h2{
   font-size:42px;
-  font-weight:600;
   margin-bottom:24px;
 }
 
 .small-title{
+  font-size:12px;
   letter-spacing:2px;
   text-transform:uppercase;
-  font-size:12px;
   color:var(--marron-suave);
   margin-bottom:12px;
 }
 
 .divider{
-  width:60px;
+  width:56px;
   height:1px;
   background:var(--marron);
   margin:24px 0;
@@ -61,7 +66,31 @@ p{
   color:var(--marron-suave);
 }
 
-/* --------- SPLIT LAYOUT --------- */
+/* -------- HERO (NO TOCAR) -------- */
+.hero{
+  background:
+    linear-gradient(rgba(251,248,244,.85),rgba(251,248,244,.85)),
+    url("assets/hero.jpg") center/cover;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:72px;
+  margin:24px 0;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--marron);
+  color:#fff;
+  padding:14px 34px;
+  border-radius:999px;
+  text-decoration:none;
+}
+
+/* -------- SPLIT -------- */
 .split{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -69,62 +98,30 @@ p{
   align-items:center;
 }
 
-.split.reverse{
-  direction:rtl;
-}
-.split.reverse > *{
-  direction:ltr;
-}
+.split.reverse{direction:rtl}
+.split.reverse > *{direction:ltr}
 
 .image img{
   width:100%;
   border-radius:28px;
-  display:block;
 }
 
-/* --------- HERO (NO SE TOCA) --------- */
-.hero{
-  background:
-    linear-gradient(rgba(246,241,234,.85),rgba(246,241,234,.85)),
-    url("assets/hero.jpg") center/cover;
-  text-align:center;
-}
-
-.hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:72px;
-  margin:24px 0;
-}
-
-.hero p{
-  margin:0 auto 32px;
-}
-
-.btn{
-  display:inline-block;
-  background:var(--marron);
-  color:#fff;
-  padding:14px 32px;
-  border-radius:999px;
-  text-decoration:none;
-}
-
-/* --------- INGREDIENTES --------- */
+/* -------- INGREDIENTES -------- */
 .ingredients{
   display:flex;
-  gap:32px;
   flex-wrap:wrap;
+  gap:24px;
   margin-top:32px;
 }
 
 .ingredient{
-  background:var(--beige);
-  padding:20px 28px;
+  background:#fff;
+  padding:18px 26px;
   border-radius:999px;
   font-size:14px;
 }
 
-/* --------- PRODUCTOS --------- */
+/* -------- PRODUCTOS -------- */
 .products{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -133,7 +130,7 @@ p{
 }
 
 .product-card{
-  background:var(--beige);
+  background:#fff;
   padding:40px 32px;
   border-radius:32px;
   text-align:center;
@@ -141,7 +138,7 @@ p{
 
 .product-card h3{
   font-family:'Playfair Display',serif;
-  margin-bottom:8px;
+  margin-bottom:6px;
 }
 
 .product-card span{
@@ -157,26 +154,45 @@ p{
   text-decoration:none;
   color:var(--marron);
   border:1px solid var(--marron);
-  padding:10px 24px;
+  padding:10px 26px;
   border-radius:999px;
 }
 
-/* --------- FOOTER --------- */
-footer{
-  padding:80px 24px;
-  text-align:center;
-  background:var(--beige);
+/* -------- COMO COMPRAR -------- */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:32px;
+  margin-top:48px;
 }
 
-/* --------- RESPONSIVE --------- */
+.step{
+  background:#fff;
+  padding:32px;
+  border-radius:28px;
+}
+
+/* -------- CONTACTO -------- */
+.contact{
+  text-align:center;
+}
+
+.contact p{
+  margin:0 auto 40px;
+}
+
+.contact-links{
+  margin-top:32px;
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  font-size:14px;
+}
+
+/* -------- RESPONSIVE -------- */
 @media(max-width:768px){
-  .split{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-  .hero h1{
-    font-size:48px;
-  }
+  .split{grid-template-columns:1fr;gap:40px}
+  .hero h1{font-size:48px}
 }
 </style>
 </head>
@@ -194,23 +210,21 @@ footer{
 </section>
 
 <!-- NUESTRA HISTORIA -->
-<section>
+<section class="bg-crema">
   <div class="container split">
     <div>
       <div class="small-title">Nuestra historia</div>
-      <h2>Un clásico, hecho con amor</h2>
+      <h2>Un clásico hecho con amor</h2>
       <div class="divider"></div>
       <p>
-        Fetta nace del deseo de transformar un clásico en una experiencia.
-        Hecho a mano, con amor y chocolate. ¡Bienvenido al lado más dulce de la mesa!
-        En Fetta creemos que los mejores momentos suceden cuando compartimos algo rico.
-        Por eso, traemos salames de chocolate artesanales, una receta única de origen italiano
-        que combina tradición y sabor.
+        Fetta nace del deseo de transformar un clásico en una experiencia. Hecho a mano,
+        con amor y chocolate. ¡Bienvenido al lado más dulce de la mesa!
+        Creemos que los mejores momentos suceden cuando compartimos algo rico.
       </p>
       <p><strong>Fetta: el dulce placer del corte perfecto.</strong></p>
     </div>
     <div class="image">
-      <img src="assets/historia.jpg" alt="Proceso artesanal Fetta">
+      <img src="assets/historia.jpg">
     </div>
   </div>
 </section>
@@ -223,27 +237,22 @@ footer{
       <h2>Salame de chocolate Fetta</h2>
       <div class="divider"></div>
       <p>
-        Una combinación equilibrada de chocolate y texturas,
-        ideal para acompañar un café, una reunión o como regalo.
-        Elaborado artesanalmente en pequeñas cantidades.
+        Una receta de origen italiano que combina tradición y sabor.
+        Perfecta para acompañar un café, servir en una reunión o darte ese gusto que te merecés.
       </p>
     </div>
     <div class="image">
-      <img src="assets/producto.jpg" alt="Salame de chocolate Fetta">
+      <img src="assets/producto.jpg">
     </div>
   </div>
 </section>
 
 <!-- INGREDIENTES -->
-<section>
+<section class="bg-crema">
   <div class="container">
     <div class="small-title">Ingredientes</div>
     <h2>Seleccionados con cuidado</h2>
     <div class="divider"></div>
-    <p>
-      Elaborado con ingredientes seleccionados, sin conservantes artificiales,
-      respetando el proceso artesanal.
-    </p>
 
     <div class="ingredients">
       <div class="ingredient">Chocolate</div>
@@ -256,43 +265,61 @@ footer{
 </section>
 
 <!-- ELIGE TU FETTA -->
-<section>
+<section class="bg-beige">
   <div class="container">
     <div class="small-title">Elige tu Fetta</div>
     <h2>Tres tamaños para cada momento</h2>
 
     <div class="products">
       <div class="product-card">
-        <h3>Gran Fetta</h3>
-        <span>450 g</span>
-        <p>Pensado para compartir sin apuro. Ideal para reuniones o regalos especiales.</p>
+        <h3>Gran Fetta</h3><span>450 g</span>
+        <p>Para compartir sin apuro.</p>
         <a href="https://wa.me/XXXXXXXXXX">Pedir por WhatsApp</a>
       </div>
 
       <div class="product-card">
-        <h3>Fetta Clásica</h3>
-        <span>225 g</span>
-        <p>El equilibrio perfecto entre compartir y disfrutar.</p>
+        <h3>Fetta Clásica</h3><span>225 g</span>
+        <p>El equilibrio perfecto.</p>
         <a href="https://wa.me/XXXXXXXXXX">Pedir por WhatsApp</a>
       </div>
 
       <div class="product-card">
-        <h3>Piccola Fetta</h3>
-        <span>112 g</span>
-        <p>Una pequeña porción para darse un gusto.</p>
+        <h3>Piccola Fetta</h3><span>112 g</span>
+        <p>Un pequeño gran gusto.</p>
         <a href="https://wa.me/XXXXXXXXXX">Pedir por WhatsApp</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>
-    <a href="https://instagram.com/fetta">Instagram</a> ·
-    <a href="mailto:hola@fetta.com">hola@fetta.com</a>
-  </p>
-</footer>
+<!-- COMO COMPRAR -->
+<section class="bg-crema">
+  <div class="container">
+    <div class="small-title">Cómo comprar</div>
+    <h2>Simple y cercano</h2>
+
+    <div class="steps">
+      <div class="step">1. Escribinos por WhatsApp</div>
+      <div class="step">2. Confirmamos disponibilidad</div>
+      <div class="step">3. Coordinamos la entrega</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="bg-beige">
+  <div class="container contact">
+    <h2>Contacto</h2>
+    <div class="divider" style="margin:24px auto"></div>
+    <p>¿Querés hacer un pedido o tenés alguna consulta? Escribinos, estaremos encantados de atenderte.</p>
+    <a class="btn" href="https://wa.me/XXXXXXXXXX">Escribinos por WhatsApp</a>
+
+    <div class="contact-links">
+      <span>Instagram</span>
+      <span>hola@fetta.com.ar</span>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
