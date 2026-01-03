@@ -1,0 +1,150 @@
+:root {
+  --beige: #f7f2ea;
+  --beige-dark: #e9e1d6;
+  --brown: #5a3d2b;
+  --text: #4a3a2f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", serif;
+  color: var(--text);
+  background-color: var(--beige);
+  line-height: 1.6;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 60px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("img/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  background: rgba(247, 242, 234, 0.85);
+  padding: 60px;
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: var(--brown);
+}
+
+.hero p {
+  margin: 20px 0;
+}
+
+/* BUTTON */
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 32px;
+  background: var(--brown);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 80px;
+}
+
+.light {
+  background: var(--beige);
+}
+
+.dark {
+  background: var(--beige-dark);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.centered {
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--brown);
+}
+
+h2 {
+  font-size: 36px;
+  margin: 12px 0 24px;
+}
+
+/* IMAGES */
+.image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  width: 260px;
+  border-radius: 6px;
+}
+
+/* STEPS */
+.steps {
+  list-style: none;
+  margin: 30px 0;
+}
+
+.steps li {
+  margin-bottom: 12px;
+}
+
+/* CONTACT */
+.contact-info {
+  margin-top: 30px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: var(--text);
+}
