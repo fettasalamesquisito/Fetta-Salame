@@ -67,60 +67,63 @@
       letter-spacing: 1px;
     }
 
-    /* HERO CON LOGO DE FONDO */
-    .hero {
-      min-height: 100vh;
-      background-color: var(--beige);
-      background-image: url('assets/hero-logo.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 700px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 20px;
-      position: relative;
+    /* HERO */
+    .hero{
+      position:relative;
+      min-height:100vh;
+      background:url("assets/hero.jpg") center/cover no-repeat;
+      display:flex;
+      flex-direction:column;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(246, 241, 233, 0.85);
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(245,239,230,.88);
     }
 
-    .hero-content {
-      position: relative;
-      max-width: 720px;
+    .hero-header{
+      position:relative;
+      z-index:2;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:24px 48px;
     }
 
-    .hero h1 {
-      font-size: 72px;
-      margin-bottom: 10px;
+    .logo{
+      font-family:"Playfair Display";
+      letter-spacing:6px;
+      font-size:20px;
     }
 
-    .hero h2 {
-      font-style: italic;
-      font-weight: 400;
-      margin-bottom: 30px;
+    .hero-header nav a{
+      margin-left:28px;
+      font-size:14px;
+      color:var(--marron);
     }
 
-    .hero p {
-      margin-bottom: 40px;
-      font-size: 16px;
+    .hero-content{
+      position:relative;
+      z-index:2;
+      margin:auto;
+      text-align:center;
+      max-width:760px;
+      padding:0 24px;
     }
 
-    .btn {
-      background: var(--marron);
-      color: #fff;
-      padding: 14px 38px;
-      border-radius: 30px;
-      font-size: 14px;
-      letter-spacing: 1px;
-      display: inline-block;
+    .hero-content h1{
+      font-size:64px;
+      letter-spacing:4px;
+      margin-bottom:12px;
     }
 
+    .hero-content h2{
+      font-size:22px;
+      font-weight:400;
+    }
+    
     section {
       padding: 120px 80px;
     }
