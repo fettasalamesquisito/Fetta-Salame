@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>FETTA · Salame de chocolate artesanal</title>
 
   <!-- SEO BÁSICO -->
-  <meta name="description" content="FETTA elabora salames de chocolate artesanales. Pensados para compartir, regalar o disfrutar con un café. Pedido directo por WhatsApp." />
-  <meta name="keywords" content="salame de chocolate, chocolate artesanal, fetta, regalos gourmet, café, chocolate italiano" />
-  <meta name="author" content="FETTA" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FETTA elabora salames de chocolate artesanales. Hechos a mano, pensados para compartir, regalar o disfrutar con un café." />
+  <meta name="keywords" content="salame de chocolate, chocolate artesanal, fetta, regalos gourmet, café" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="FETTA · Salame de chocolate artesanal" />
-  <meta property="og:description" content="El dulce placer del corte perfecto. Pedidos por WhatsApp." />
-  <meta property="og:type" content="website" />
-
-  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --beige: #f7f2ea;
-      --crema: #fcfaf6;
+      --beige: #f6f1e9;
+      --crema: #fbf9f5;
       --marron: #5b3c2a;
       --texto: #6b4a38;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', sans-serif;
       background: var(--crema);
       color: var(--texto);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     h1, h2, h3 {
@@ -44,12 +33,6 @@
       color: var(--marron);
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* NAV */
     header {
       position: absolute;
       top: 0;
@@ -57,24 +40,23 @@
       padding: 30px 60px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
       z-index: 10;
     }
 
     nav a {
-      margin-left: 30px;
+      margin-left: 28px;
       font-size: 14px;
       letter-spacing: 1px;
     }
 
-    /* HERO */
+    /* HERO CON LOGO DE FONDO */
     .hero {
       min-height: 100vh;
-      background-image:
-        linear-gradient(rgba(247,242,234,0.88), rgba(247,242,234,0.88)),
-        url('images/hero.jpg');
-      background-size: cover;
+      background-color: var(--beige);
+      background-image: url('images/hero-logo.png');
+      background-repeat: no-repeat;
       background-position: center;
+      background-size: 700px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -82,40 +64,37 @@
       padding: 0 20px;
     }
 
-    .hero h1 {
-      font-size: 64px;
-      margin-bottom: 10px;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(246,241,233,0.85);
     }
 
-    .hero h2 {
-      font-style: italic;
-      font-weight: 400;
-      margin-bottom: 25px;
+    .hero-content {
+      position: relative;
+      max-width: 700px;
     }
 
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto 40px;
-      font-size: 16px;
-    }
+    .hero h1 { font-size: 72px; }
+    .hero h2 { font-style: italic; margin: 10px 0 30px; }
 
     .btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 14px 38px;
       background: var(--marron);
       color: #fff;
-      padding: 14px 36px;
       border-radius: 30px;
       font-size: 14px;
       letter-spacing: 1px;
-      display: inline-block;
     }
 
     section {
       padding: 120px 80px;
     }
 
-    .alt {
-      background: var(--beige);
-    }
+    .alt { background: var(--beige); }
 
     .grid {
       display: grid;
@@ -126,48 +105,39 @@
 
     .grid img {
       width: 100%;
-      border-radius: 14px;
+      border-radius: 16px;
     }
 
     .subtitle {
-      letter-spacing: 2px;
       font-size: 12px;
-      margin-bottom: 10px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
     }
 
-    /* PRODUCTOS */
     .productos {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 40px;
-      text-align: center;
+      margin-top: 60px;
     }
 
     .producto {
       background: var(--crema);
       padding: 40px;
-      border-radius: 18px;
-    }
-
-    footer {
-      padding: 100px 40px;
+      border-radius: 20px;
       text-align: center;
     }
 
-    footer p {
-      margin-bottom: 30px;
+    footer {
+      padding: 120px 40px;
+      text-align: center;
+      background: var(--beige);
     }
 
     @media(max-width: 900px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      .productos {
-        grid-template-columns: 1fr;
-      }
-      .hero h1 {
-        font-size: 46px;
-      }
+      .grid { grid-template-columns: 1fr; }
+      .productos { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 48px; }
     }
   </style>
 </head>
@@ -187,7 +157,7 @@
 
 <!-- HERO -->
 <section class="hero" id="inicio">
-  <div>
+  <div class="hero-content">
     <h1>FETTA</h1>
     <h2>Salame de chocolate artesanal</h2>
     <p>Pensado para compartir en un café, regalar en un momento especial o simplemente disfrutarlo por sí mismo.</p>
@@ -205,7 +175,6 @@
         Fetta nace del deseo de transformar un clásico en una experiencia.
         ¡Bienvenido al lado más dulce de la mesa!
         Creemos que los mejores momentos suceden cuando compartimos algo rico.
-        Una receta de origen italiano pensada para acompañar un café, una reunión o ese gusto que te merecés.
         <br><br>
         <strong>FETTA · El dulce placer del corte perfecto.</strong>
       </p>
@@ -214,14 +183,30 @@
   </div>
 </section>
 
-<!-- INGREDIENTES -->
+<!-- NUESTRO PRODUCTO -->
 <section class="alt">
+  <div class="grid">
+    <div>
+      <p class="subtitle">NUESTRO PRODUCTO</p>
+      <h2>Salame de chocolate Fetta</h2>
+      <p>
+        Una combinación equilibrada de chocolate y texturas,
+        ideal para acompañar un café, una reunión o como regalo.
+        Elaborado artesanalmente en pequeñas cantidades.
+      </p>
+    </div>
+    <img src="images/producto.jpg" alt="Salame de chocolate Fetta">
+  </div>
+</section>
+
+<!-- INGREDIENTES -->
+<section>
   <h2>Ingredientes</h2>
   <p>Chocolate, galleta, manteca, azúcar y cacao.<br>Sin conservantes artificiales.</p>
 </section>
 
-<!-- PRODUCTO -->
-<section id="producto">
+<!-- ELEGÍ TU FETTA -->
+<section class="alt" id="producto">
   <h2>Elegí tu Fetta</h2>
   <div class="productos">
     <div class="producto">
@@ -243,11 +228,9 @@
 </section>
 
 <!-- CÓMO COMPRAR -->
-<section class="alt" id="comprar">
+<section id="comprar">
   <h2>Cómo comprar</h2>
-  <p>1. Escribinos por WhatsApp<br>
-     2. Confirmamos disponibilidad<br>
-     3. Coordinamos entrega</p>
+  <p>1. Escribinos por WhatsApp<br>2. Confirmamos disponibilidad<br>3. Coordinamos entrega</p>
 </section>
 
 <!-- CONTACTO -->
