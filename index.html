@@ -1,271 +1,297 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FETTA · Salame de chocolate artesanal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FETTA · Salame de chocolate artesanal</title>
 
-  <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --beige:#f5efe6;
-      --crema:#fbf7f2;
-      --marron:#6b4a3a;
-      --marron-oscuro:#4a3528;
-    }
+<style>
+:root{
+  --beige:#F6F1EA;
+  --crema:#FBF8F4;
+  --marron:#5B3A29;
+  --marron-suave:#7A5A48;
+}
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter, sans-serif;
-      color:var(--marron-oscuro);
-      background:var(--crema);
-      line-height:1.7;
-    }
+*{box-sizing:border-box;margin:0;padding:0}
 
-    h1,h2,h3{
-      font-family:"Playfair Display", serif;
-      font-weight:600;
-      color:var(--marron);
-    }
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--crema);
+  color:var(--marron);
+  line-height:1.6;
+}
 
-    a{text-decoration:none;color:inherit}
+/* --------- GENERAL --------- */
+section{
+  padding:100px 24px;
+}
 
-    .btn{
-      display:inline-block;
-      padding:14px 28px;
-      border-radius:999px;
-      background:var(--marron);
-      color:#fff;
-      font-weight:500;
-      margin-top:12px;
-    }
+.container{
+  max-width:1100px;
+  margin:auto;
+}
 
-    /* HERO */
-    .hero{
-      position:relative;
-      min-height:100vh;
-      background:url("assets/hero.jpg") center/cover no-repeat;
-      display:flex;
-      flex-direction:column;
-    }
+h2{
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  font-weight:600;
+  margin-bottom:24px;
+}
 
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:rgba(245,239,230,.88);
-    }
+.small-title{
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-size:12px;
+  color:var(--marron-suave);
+  margin-bottom:12px;
+}
 
-    .hero-header{
-      position:relative;
-      z-index:2;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:24px 48px;
-    }
+.divider{
+  width:60px;
+  height:1px;
+  background:var(--marron);
+  margin:24px 0;
+}
 
-    .logo{
-      font-family:"Playfair Display";
-      letter-spacing:6px;
-      font-size:20px;
-    }
+p{
+  max-width:480px;
+  color:var(--marron-suave);
+}
 
-    .hero-header nav a{
-      margin-left:28px;
-      font-size:14px;
-      color:var(--marron);
-    }
+/* --------- SPLIT LAYOUT --------- */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
 
-    .hero-content{
-      position:relative;
-      z-index:2;
-      margin:auto;
-      text-align:center;
-      max-width:760px;
-      padding:0 24px;
-    }
+.split.reverse{
+  direction:rtl;
+}
+.split.reverse > *{
+  direction:ltr;
+}
 
-    .hero-content h1{
-      font-size:64px;
-      letter-spacing:4px;
-      margin-bottom:12px;
-    }
+.image img{
+  width:100%;
+  border-radius:28px;
+  display:block;
+}
 
-    .hero-content h2{
-      font-size:22px;
-      font-weight:400;
-    }
+/* --------- HERO (NO SE TOCA) --------- */
+.hero{
+  background:
+    linear-gradient(rgba(246,241,234,.85),rgba(246,241,234,.85)),
+    url("assets/hero.jpg") center/cover;
+  text-align:center;
+}
 
-    section{
-      padding:96px 24px;
-    }
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:72px;
+  margin:24px 0;
+}
 
-    .container{
-      max-width:1000px;
-      margin:auto;
-    }
+.hero p{
+  margin:0 auto 32px;
+}
 
-    .bg-crema{background:var(--crema)}
-    .bg-beige{background:var(--beige)}
+.btn{
+  display:inline-block;
+  background:var(--marron);
+  color:#fff;
+  padding:14px 32px;
+  border-radius:999px;
+  text-decoration:none;
+}
 
-    /* PRODUCTOS */
-    .productos{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:32px;
-      margin-top:48px;
-    }
+/* --------- INGREDIENTES --------- */
+.ingredients{
+  display:flex;
+  gap:32px;
+  flex-wrap:wrap;
+  margin-top:32px;
+}
 
-    .card{
-      background:var(--crema);
-      padding:32px;
-      border-radius:20px;
-      text-align:center;
-    }
+.ingredient{
+  background:var(--beige);
+  padding:20px 28px;
+  border-radius:999px;
+  font-size:14px;
+}
 
-    .card span{
-      font-size:14px;
-      opacity:.7;
-    }
+/* --------- PRODUCTOS --------- */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
+  margin-top:64px;
+}
 
-    /* INGREDIENTES */
-    .ingredientes{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-      margin-top:32px;
-    }
+.product-card{
+  background:var(--beige);
+  padding:40px 32px;
+  border-radius:32px;
+  text-align:center;
+}
 
-    .ingredientes li{
-      list-style:none;
-      background:var(--crema);
-      padding:12px 18px;
-      border-radius:999px;
-      font-size:14px;
-    }
+.product-card h3{
+  font-family:'Playfair Display',serif;
+  margin-bottom:8px;
+}
 
-    footer{
-      background:var(--beige);
-      padding:56px 24px;
-      text-align:center;
-      font-size:14px;
-    }
+.product-card span{
+  font-size:14px;
+  color:var(--marron-suave);
+}
 
-    @media(max-width:768px){
-      .hero-header nav{display:none}
-      .hero-content h1{font-size:44px}
-    }
-  </style>
+.product-card p{
+  margin:16px auto 24px;
+}
+
+.product-card a{
+  text-decoration:none;
+  color:var(--marron);
+  border:1px solid var(--marron);
+  padding:10px 24px;
+  border-radius:999px;
+}
+
+/* --------- FOOTER --------- */
+footer{
+  padding:80px 24px;
+  text-align:center;
+  background:var(--beige);
+}
+
+/* --------- RESPONSIVE --------- */
+@media(max-width:768px){
+  .split{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  .hero h1{
+    font-size:48px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <!-- HERO -->
-<section class="hero" id="inicio">
-  <header class="hero-header">
-    <div class="logo">FETTA</div>
-    <nav>
-      <a href="#historia">Nosotros</a>
-      <a href="#producto">Producto</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <div class="hero-content">
-    <h1>FETTA</h1>
-    <h2>Salame de chocolate artesanal</h2>
+<section class="hero">
+  <div class="container">
+    <div class="small-title">FETTA</div>
+    <h1>Salame de chocolate artesanal</h1>
     <p>Pensado para compartir en un café, regalar en un momento especial o simplemente disfrutarlo por sí mismo.</p>
     <a class="btn" href="https://wa.me/XXXXXXXXXX">Comprar por WhatsApp</a>
   </div>
 </section>
 
 <!-- NUESTRA HISTORIA -->
-<section class="bg-crema" id="historia">
-  <div class="container">
-    <h2>Nuestra historia</h2>
-    <p>
-      Fetta nace del deseo de transformar un clásico en una experiencia.
-      Hecho a mano, con amor y chocolate. ¡Bienvenido al lado más dulce de la mesa!
-    </p>
-    <p>
-      En Fetta creemos que los mejores momentos suceden cuando compartimos algo rico.
-      Por eso, traemos salames de chocolate artesanales, una receta única de origen italiano
-      que combina tradición y sabor.
-    </p>
-    <p>
-      Perfecta para acompañar un café, servir en una reunión o darte ese gusto que te mereces.
-      <strong>Fetta: el dulce placer del corte perfecto.</strong>
-    </p>
+<section>
+  <div class="container split">
+    <div>
+      <div class="small-title">Nuestra historia</div>
+      <h2>Un clásico, hecho con amor</h2>
+      <div class="divider"></div>
+      <p>
+        Fetta nace del deseo de transformar un clásico en una experiencia.
+        Hecho a mano, con amor y chocolate. ¡Bienvenido al lado más dulce de la mesa!
+        En Fetta creemos que los mejores momentos suceden cuando compartimos algo rico.
+        Por eso, traemos salames de chocolate artesanales, una receta única de origen italiano
+        que combina tradición y sabor.
+      </p>
+      <p><strong>Fetta: el dulce placer del corte perfecto.</strong></p>
+    </div>
+    <div class="image">
+      <img src="assets/historia.jpg" alt="Proceso artesanal Fetta">
+    </div>
   </div>
 </section>
 
 <!-- NUESTRO PRODUCTO -->
 <section class="bg-beige">
-  <div class="container">
-    <h2>Nuestro producto</h2>
-    <p>
-      Cada salame de chocolate Fetta se elabora de manera artesanal, respetando una receta
-      de inspiración italiana. Cuidamos cada detalle: la textura, el equilibrio del chocolate
-      y la experiencia al cortar y compartir.
-    </p>
+  <div class="container split reverse">
+    <div>
+      <div class="small-title">Nuestro producto</div>
+      <h2>Salame de chocolate Fetta</h2>
+      <div class="divider"></div>
+      <p>
+        Una combinación equilibrada de chocolate y texturas,
+        ideal para acompañar un café, una reunión o como regalo.
+        Elaborado artesanalmente en pequeñas cantidades.
+      </p>
+    </div>
+    <div class="image">
+      <img src="assets/producto.jpg" alt="Salame de chocolate Fetta">
+    </div>
   </div>
 </section>
 
 <!-- INGREDIENTES -->
-<section class="bg-crema">
+<section>
   <div class="container">
-    <h2>Ingredientes</h2>
-    <p>Elaborado con ingredientes seleccionados, sin conservantes artificiales.</p>
+    <div class="small-title">Ingredientes</div>
+    <h2>Seleccionados con cuidado</h2>
+    <div class="divider"></div>
+    <p>
+      Elaborado con ingredientes seleccionados, sin conservantes artificiales,
+      respetando el proceso artesanal.
+    </p>
 
-    <ul class="ingredientes">
-      <li>Chocolate</li>
-      <li>Galleta</li>
-      <li>Manteca</li>
-      <li>Azúcar</li>
-      <li>Cacao</li>
-    </ul>
+    <div class="ingredients">
+      <div class="ingredient">Chocolate</div>
+      <div class="ingredient">Galleta</div>
+      <div class="ingredient">Manteca</div>
+      <div class="ingredient">Azúcar</div>
+      <div class="ingredient">Cacao</div>
+    </div>
   </div>
 </section>
 
 <!-- ELIGE TU FETTA -->
-<section class="bg-beige" id="producto">
+<section>
   <div class="container">
-    <h2>Elige tu Fetta</h2>
+    <div class="small-title">Elige tu Fetta</div>
+    <h2>Tres tamaños para cada momento</h2>
 
-    <div class="productos">
-      <div class="card">
+    <div class="products">
+      <div class="product-card">
         <h3>Gran Fetta</h3>
         <span>450 g</span>
-        <p>Pensado para compartir sin apuro. Ideal para reuniones o como regalo especial.</p>
-        <a class="btn" href="https://wa.me/XXXXXXXXXX">Pedir por WhatsApp</a>
+        <p>Pensado para compartir sin apuro. Ideal para reuniones o regalos especiales.</p>
+        <a href="https://wa.me/XXXXXXXXXX">Pedir por WhatsApp</a>
       </div>
 
-      <div class="card">
+      <div class="product-card">
         <h3>Fetta Clásica</h3>
         <span>225 g</span>
         <p>El equilibrio perfecto entre compartir y disfrutar.</p>
-        <a class="btn" href="https://wa.me/XXXXXXXXXX">Pedir por WhatsApp</a>
+        <a href="https://wa.me/XXXXXXXXXX">Pedir por WhatsApp</a>
       </div>
 
-      <div class="card">
+      <div class="product-card">
         <h3>Piccola Fetta</h3>
         <span>112 g</span>
         <p>Una pequeña porción para darse un gusto.</p>
-        <a class="btn" href="https://wa.me/XXXXXXXXXX">Pedir por WhatsApp</a>
+        <a href="https://wa.me/XXXXXXXXXX">Pedir por WhatsApp</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACTO -->
-<footer id="contacto">
-  <p><strong>WhatsApp</strong> · Canal principal de venta</p>
-  <p>Instagram · Email de contacto</p>
-  <p style="margin-top:16px;">FETTA · Salame de chocolate artesanal</p>
+<!-- FOOTER -->
+<footer>
+  <p>
+    <a href="https://instagram.com/fetta">Instagram</a> ·
+    <a href="mailto:hola@fetta.com">hola@fetta.com</a>
+  </p>
 </footer>
 
 </body>
