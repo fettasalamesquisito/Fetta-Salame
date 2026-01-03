@@ -189,28 +189,7 @@
       border-radius:999px;
       font-size:14px;
     }
-    
-    .split{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:64px;
-      align-items:center;
-    }
 
-    .split.reverse{
-      direction:rtl;
-    }
-    
-    .split.reverse > *{
-      direction:ltr;
-    }
-    
-    .split img{
-      width:100%;
-      border-radius:24px;
-      display:block;
-    }
-    
     footer {
       padding: 120px 40px;
       text-align: center;
@@ -258,7 +237,7 @@
 
 <!-- NUESTRA HISTORIA -->
 <section id="nosotros">
-  <div class="container split">
+  <div class="grid">
     <div>
       <p class="subtitle">NUESTRA HISTORIA</p>
       <h2>Hecho a mano, con amor y chocolate</h2>
@@ -276,17 +255,13 @@
       <strong>Fetta: el dulce placer del corte perfecto.</strong>
       </p>
     </div>
-    <div class="image">
-      <img src="assets/historia.jpg" alt="Proceso artesanal Fetta">
+    <img src="assets/historia.jpg" alt="Proceso artesanal Fetta">
   </div>
 </section>
 
 <!-- NUESTRO PRODUCTO -->
 <section class="alt">
-  <div class="container split reverse">
-    <div class="image">
-      <img src="assets/producto.jpg" alt="Salame de chocolate Fetta">
-    </div>
+  <div class="grid">
     <div>
       <p class="subtitle">NUESTRO PRODUCTO</p>
       <h2>Salame de chocolate Fetta</h2>
