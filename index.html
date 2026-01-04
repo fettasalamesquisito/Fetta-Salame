@@ -165,16 +165,16 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 48px;
-        max-width: 1000px;
-        margin: 0 auto;
+        margin-top: 64px;
+        text-align: center;
         }
       
-      .paso img {
-        width: 72px;
-        height: 72px;
-        margin-bottom: 24px;
+        .paso img {
+        width: 96px;       
+        height: 96px;
+        margin-bottom: 28px;
         object-fit: contain;
-      }
+        }  
       
       .paso h3 {
         font-size: 22px;
@@ -186,13 +186,29 @@
         opacity: 0.85;
       }
     
-       @media (max-width: 480px) {
-      .paso img {
-        width: 64px;
-        height: 64px;
-        margin-bottom: 20px;
-          }
+       @media (max-width: 900px) {
+        .pasos {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 40px;
         }
+      
+        .paso img {
+          width: 88px;
+          height: 88px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .pasos {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+      
+        .paso img {
+          width: 80px;
+          height: 80px;
+        }
+      }
       
       /* ---------- RESPONSIVE ---------- */
       @media (max-width: 900px) {
@@ -361,50 +377,36 @@
     </div>
   </section>
 
-  <section class="bg-beige" id="como-comprar">
-  <div class="container como-comprar">
-
+  <section class="bg-crema" id="como-comprar">
+  <div class="container">
     <h2>Cómo comprar</h2>
-    <p class="intro">
-      Cuatro simples pasos para disfrutar de nuestro salame de chocolate artesanal.
-    </p>
+    <p>Cuatro simples pasos para disfrutar de nuestro salame de chocolate artesanal.</p>
 
     <div class="pasos">
-
       <div class="paso">
-
-          <img src="assets/paso-whatsapp.png" alt="Escríbenos por WhatsApp">
-    
+        <img src="assets/paso-whatsapp.png" alt="Escríbenos por WhatsApp">
         <h3>Escríbenos</h3>
         <p>Contáctanos por WhatsApp y cuéntanos qué necesitas.</p>
       </div>
 
       <div class="paso">
-   
-          <img src="assets/paso-confirmar.png" alt="Confirmamos disponibilidad">
-       
+        <img src="assets/paso-confirmar.png" alt="Confirmamos disponibilidad">
         <h3>Confirmamos</h3>
         <p>Te confirmamos disponibilidad y el tamaño ideal.</p>
       </div>
 
       <div class="paso">
-        
-          <img src="assets/paso-pago.png" alt="Realiza el pago">
-        
+        <img src="assets/paso-pago.png" alt="Realiza el pago">
         <h3>Realiza el pago</h3>
         <p>Te indicamos el medio de pago para continuar.</p>
       </div>
 
       <div class="paso">
-        
-          <img src="assets/paso-entrega.png" alt="Coordinamos la entrega">
-     
+        <img src="assets/paso-entrega.png" alt="Entrega">
         <h3>Entrega</h3>
         <p>Coordinamos la entrega para que lo disfrutes.</p>
       </div>
-
     </div>
-
   </div>
 </section>
 
