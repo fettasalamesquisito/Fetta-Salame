@@ -155,34 +155,24 @@
         text-align: center;
       }
       
-      .como-comprar .intro {
+        .como-comprar .intro {
         max-width: 520px;
         margin: 0 auto 64px;
         opacity: 0.85;
-      }
+        }
       
-      .pasos {
+        .pasos {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 48px;
         max-width: 1000px;
         margin: 0 auto;
-      }
+        }
       
-      .paso-icono {
-        width: 96px;
-        height: 96px;
-        margin: 0 auto 24px;
-        border-radius: 50%;
-        background: var(--crema);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      .paso-icono img {
-        width: 48px;
-        height: 48px;
+      .paso img {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 24px;
         object-fit: contain;
       }
       
@@ -196,17 +186,13 @@
         opacity: 0.85;
       }
     
-      @media (max-width: 480px) {
-      .paso-icono {
-        width: 88px;
-        height: 88px;
-      }
-    
-      .paso-icono img {
-        width: 44px;
-        height: 44px;
+       @media (max-width: 480px) {
+      .paso img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 20px;
+          }
         }
-      }
       
       /* ---------- RESPONSIVE ---------- */
       @media (max-width: 900px) {
@@ -386,33 +372,33 @@
     <div class="pasos">
 
       <div class="paso">
-        <div class="paso-icono">
+
           <img src="assets/paso-whatsapp.png" alt="Escríbenos por WhatsApp">
-        </div>
+    
         <h3>Escríbenos</h3>
         <p>Contáctanos por WhatsApp y cuéntanos qué necesitas.</p>
       </div>
 
       <div class="paso">
-        <div class="paso-icono">
+   
           <img src="assets/paso-confirmar.png" alt="Confirmamos disponibilidad">
-        </div>
+       
         <h3>Confirmamos</h3>
         <p>Te confirmamos disponibilidad y el tamaño ideal.</p>
       </div>
 
       <div class="paso">
-        <div class="paso-icono">
+        
           <img src="assets/paso-pago.png" alt="Realiza el pago">
-        </div>
+        
         <h3>Realiza el pago</h3>
         <p>Te indicamos el medio de pago para continuar.</p>
       </div>
 
       <div class="paso">
-        <div class="paso-icono">
+        
           <img src="assets/paso-entrega.png" alt="Coordinamos la entrega">
-        </div>
+     
         <h3>Entrega</h3>
         <p>Coordinamos la entrega para que lo disfrutes.</p>
       </div>
