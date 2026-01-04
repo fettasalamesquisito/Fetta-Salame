@@ -150,7 +150,75 @@
       font-size:14px;
       opacity:.7;
     }
+    /* ---------- COMO COMPRAR ---------- */
+    .como-comprar{
+      text-align:center;
+    }
     
+    .como-header{
+      max-width:620px;
+      margin:0 auto 64px;
+    }
+    
+    .como-header .divider{
+      display:block;
+      width:60px;
+      height:2px;
+      background:var(--marron);
+      margin:16px auto 24px;
+      opacity:.4;
+    }
+    
+    .pasos{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:40px;
+    }
+    
+    .paso{
+      max-width:240px;
+      margin:auto;
+    }
+    
+    .icono{
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      border:1px solid rgba(0,0,0,.08);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:24px;
+      margin:0 auto 20px;
+      background:var(--crema);
+    }
+    
+    .paso-num{
+      display:block;
+      font-size:13px;
+      letter-spacing:1px;
+      opacity:.6;
+      margin-bottom:8px;
+    }
+    
+    .paso h3{
+      font-size:20px;
+    }
+    
+    /* Mobile */
+    @media(max-width:900px){
+      .pasos{
+        grid-template-columns:1fr 1fr;
+        gap:48px;
+      }
+    }
+    
+    @media(max-width:520px){
+      .pasos{
+        grid-template-columns:1fr;
+      }
+    }
+        
     /* ---------- FOOTER ---------- */
     footer{
       background:var(--beige);
@@ -284,17 +352,52 @@
     </div>
   </section>
 
-  <!-- COMO COMPRAR -->
-  <section class="--crema" id="como-comprar">
-    <div class="container">
+  <section class="bg-crema" id="como-comprar">
+  <div class="container como-comprar">
+
+    <div class="como-header">
       <h2>Cómo comprar</h2>
-      <p>1. Escríbenos por WhatsApp<br>
-         2. Confirmamos disponibilidad y tamaño<br>
-         3. Realiza pago <br>
-         4. Coordinamos entrega
+      <span class="divider"></span>
+      <p>
+        Cuatro pasos simples para disfrutar de nuestro
+        salame de chocolate artesanal.
       </p>
     </div>
-  </section>
+
+    <div class="pasos">
+
+      <div class="paso">
+        <div class="icono">💬</div>
+        <span class="paso-num">Paso 1</span>
+        <h3>Escribinos</h3>
+        <p>Iniciá tu pedido escribiéndonos por WhatsApp.</p>
+      </div>
+
+      <div class="paso">
+        <div class="icono">✔️</div>
+        <span class="paso-num">Paso 2</span>
+        <h3>Confirmamos</h3>
+        <p>Confirmamos disponibilidad y tamaño ideal.</p>
+      </div>
+
+      <div class="paso">
+        <div class="icono">💳</div>
+        <span class="paso-num">Paso 3</span>
+        <h3>Pago</h3>
+        <p>Realizás el pago de forma simple y segura.</p>
+      </div>
+
+      <div class="paso">
+        <div class="icono">📦</div>
+        <span class="paso-num">Paso 4</span>
+        <h3>Entrega</h3>
+        <p>Coordinamos la entrega para que disfrutes tu Fetta.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
   <!-- CONTACTO -->
   <footer id="contacto">
