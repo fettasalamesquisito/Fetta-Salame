@@ -151,73 +151,74 @@
       opacity:.7;
     }
     /* ---------- COMO COMPRAR ---------- */
-    .como-comprar{
-      text-align:center;
-    }
-    
-    .como-header{
-      max-width:620px;
-      margin:0 auto 64px;
-    }
-    
-    .como-header .divider{
-      display:block;
-      width:60px;
-      height:2px;
-      background:var(--marron);
-      margin:16px auto 24px;
-      opacity:.4;
-    }
-    
-    .pasos{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:40px;
-    }
-    
-    .paso{
-      max-width:240px;
-      margin:auto;
-    }
-    
-    .icono{
-      width:64px;
-      height:64px;
-      border-radius:50%;
-      border:1px solid rgba(0,0,0,.08);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:24px;
-      margin:0 auto 20px;
-      background:var(--crema);
-    }
-    
-    .paso-num{
-      display:block;
-      font-size:13px;
-      letter-spacing:1px;
-      opacity:.6;
-      margin-bottom:8px;
-    }
-    
-    .paso h3{
-      font-size:20px;
-    }
-    
-    /* Mobile */
-    @media(max-width:900px){
-      .pasos{
-        grid-template-columns:1fr 1fr;
-        gap:48px;
+      .como-comprar {
+        text-align: center;
       }
-    }
-    
-    @media(max-width:520px){
-      .pasos{
-        grid-template-columns:1fr;
+      
+      .como-comprar .intro {
+        max-width: 520px;
+        margin: 0 auto 64px;
+        opacity: 0.85;
       }
-    }
+      
+      .pasos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 48px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      
+      .paso img {
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
+        margin-bottom: 24px;
+      }
+      
+      .paso h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+      
+      .paso p {
+        font-size: 15px;
+        opacity: 0.85;
+      }
+      
+      /* ---------- RESPONSIVE ---------- */
+      @media (max-width: 900px) {
+        .pasos {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 40px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .pasos {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+      
+        .paso img {
+          width: 64px;
+          height: 64px;
+        }
+      }
+          
+          /* Mobile */
+          @media(max-width:900px){
+            .pasos{
+              grid-template-columns:1fr 1fr;
+              gap:48px;
+            }
+          }
+          
+          @media(max-width:520px){
+            .pasos{
+              grid-template-columns:1fr;
+            }
+          }
         
     /* ---------- FOOTER ---------- */
     footer{
