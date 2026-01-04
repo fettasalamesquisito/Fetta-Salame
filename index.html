@@ -217,63 +217,48 @@
         
     /* ---------- CONTACTO ---------- */
 .contacto {
-  background: var(--beige);
+  background: var(--crema);
   padding: 120px 24px;
   text-align: center;
 }
 
-.contacto-container {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
 .contacto h2 {
-  font-size: 48px;
-  margin-bottom: 12px;
+  font-size: 42px;
+  margin-bottom: 16px;
 }
 
-.contacto .divider {
+.divider {
   display: block;
-  width: 56px;
-  height: 2px;
-  background: rgba(107, 74, 58, 0.4);
-  margin: 16px auto 32px;
+  width: 60px;
+  height: 1px;
+  background: var(--marron);
+  margin: 0 auto 32px;
+  opacity: 0.4;
 }
 
 .contacto-texto {
-  font-size: 18px;
+  max-width: 520px;
+  margin: 0 auto 48px;
+  font-size: 16px;
   color: var(--marron-oscuro);
-  opacity: 0.85;
-  margin-bottom: 48px;
 }
 
-.contacto-btn {
-  margin-bottom: 48px;
-}
-
-.contacto-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
+.contacto-info {
+  margin-top: 48px;
   font-size: 14px;
-  color: var(--marron);
+  opacity: 0.7;
+  line-height: 1.8;
 }
 
-.contacto-links a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  opacity: 0.85;
-}
+/* Mobile */
+@media (max-width: 768px) {
+  .contacto {
+    padding: 80px 24px;
+  }
 
-.contacto-links img {
-  width: 18px;
-  height: 18px;
-}
-
-.separator {
-  opacity: 0.4;
+  .contacto h2 {
+    font-size: 32px;
+  }
 }
 
 /* ---------- RESPONSIVE CONTACTO ---------- */
@@ -456,38 +441,25 @@
 
   <!-- CONTACTO -->
   <section class="contacto" id="contacto">
-  <div class="contacto-container">
+  <div class="container">
     <h2>Contacto</h2>
     <span class="divider"></span>
 
     <p class="contacto-texto">
       ¿Querés hacer un pedido o tenés alguna consulta?
+      <br>
       Escribinos, estaremos encantados de atenderte.
     </p>
 
-    <a
-      class="btn contacto-btn"
-      href="https://wa.me/XXXXXXXXXX"
-      target="_blank"
-      rel="noopener"
-    >
+    <a class="btn" href="https://wa.me/XXXXXXXXXX" target="_blank">
       Escribinos por WhatsApp
     </a>
 
-    <div class="contacto-links">
-      <a href="https://instagram.com/fetta" target="_blank" rel="noopener">
-        <img src="assets/icon-instagram.png" alt="Instagram Fetta">
-        Instagram
-      </a>
-
-      <span class="separator">|</span>
-
-      <a href="mailto:hola@fetta.com.ar">
-        <img src="assets/icon-mail.png" alt="Email Fetta">
-        hola@fetta.com.ar
-      </a>
-      </div>
-    </div>
-  </section>
+    <p class="contacto-info">
+      Instagram · @fetta <br>
+      hola@fetta.com.ar
+    </p>
+  </div>
+</section>
 </body>
 </html>
