@@ -184,12 +184,15 @@
       object-fit:cover;
     }
     @media(max-width:768px){
-  .historia-imagen{
-    margin: 0 -24px; /* rompe suavemente el container */
+  .historia-grid{
+    grid-template-columns: 1fr;
+    gap:32px;
   }
 
   .historia-imagen img{
-    border-radius:0;
+    width:100%;
+    max-width:100%;
+    border-radius:20px;
   }
 }
   </style>
