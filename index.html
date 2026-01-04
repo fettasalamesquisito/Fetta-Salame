@@ -215,13 +215,86 @@
   }
 }
         
-    /* ---------- FOOTER ---------- */
-    footer{
-      background:var(--beige);
-      padding:48px 24px;
-      text-align:center;
-      font-size:14px;
-    }
+    /* ---------- CONTACTO ---------- */
+.contacto {
+  background: var(--beige);
+  padding: 120px 24px;
+  text-align: center;
+}
+
+.contacto-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.contacto h2 {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.contacto .divider {
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: rgba(107, 74, 58, 0.4);
+  margin: 16px auto 32px;
+}
+
+.contacto-texto {
+  font-size: 18px;
+  color: var(--marron-oscuro);
+  opacity: 0.85;
+  margin-bottom: 48px;
+}
+
+.contacto-btn {
+  margin-bottom: 48px;
+}
+
+.contacto-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--marron);
+}
+
+.contacto-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.85;
+}
+
+.contacto-links img {
+  width: 18px;
+  height: 18px;
+}
+
+.separator {
+  opacity: 0.4;
+}
+
+/* ---------- RESPONSIVE CONTACTO ---------- */
+@media (max-width: 480px) {
+  .contacto h2 {
+    font-size: 36px;
+  }
+
+  .contacto-texto {
+    font-size: 16px;
+  }
+
+  .contacto-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .separator {
+    display: none;
+  }
+}
 
     /* ---------- RESPONSIVE ---------- */
     @media(max-width:768px){
@@ -382,11 +455,39 @@
 </section>
 
   <!-- CONTACTO -->
-  <footer id="contacto">
-    <p><strong>WhatsApp</strong> · Canal principal de venta</p>
-    <p>Instagram · Email de contacto</p>
-    <p style="margin-top:16px;">FETTA · Salame de chocolate artesanal</p>
-  </footer>
+  <section class="contacto" id="contacto">
+  <div class="contacto-container">
+    <h2>Contacto</h2>
+    <span class="divider"></span>
 
+    <p class="contacto-texto">
+      ¿Querés hacer un pedido o tenés alguna consulta?
+      Escribinos, estaremos encantados de atenderte.
+    </p>
+
+    <a
+      class="btn contacto-btn"
+      href="https://wa.me/XXXXXXXXXX"
+      target="_blank"
+      rel="noopener"
+    >
+      Escribinos por WhatsApp
+    </a>
+
+    <div class="contacto-links">
+      <a href="https://instagram.com/fetta" target="_blank" rel="noopener">
+        <img src="assets/icon-instagram.svg" alt="Instagram Fetta">
+        Instagram
+      </a>
+
+      <span class="separator">|</span>
+
+      <a href="mailto:hola@fetta.com.ar">
+        <img src="assets/icon-mail.svg" alt="Email Fetta">
+        hola@fetta.com.ar
+      </a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
