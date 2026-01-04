@@ -169,11 +169,21 @@
         margin: 0 auto;
       }
       
-      .paso img {
-        width: 72px;
-        height: 72px;
+      .paso-icono {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 24px;
+        border-radius: 50%;
+        background: var(--crema);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .paso-icono img {
+        width: 48px;
+        height: 48px;
         object-fit: contain;
-        margin-bottom: 24px;
       }
       
       .paso h3 {
@@ -184,6 +194,18 @@
       .paso p {
         font-size: 15px;
         opacity: 0.85;
+      }
+    
+      @media (max-width: 480px) {
+      .paso-icono {
+        width: 88px;
+        height: 88px;
+      }
+    
+      .paso-icono img {
+        width: 44px;
+        height: 44px;
+        }
       }
       
       /* ---------- RESPONSIVE ---------- */
@@ -364,25 +386,33 @@
     <div class="pasos">
 
       <div class="paso">
-        <img src="assets/paso-whatsapp.png" alt="Escríbenos por WhatsApp">
+        <div class="paso-icono">
+          <img src="assets/paso-whatsapp.png" alt="Escríbenos por WhatsApp">
+        </div>
         <h3>Escríbenos</h3>
         <p>Contáctanos por WhatsApp y cuéntanos qué necesitas.</p>
       </div>
 
       <div class="paso">
-        <img src="assets/paso-confirmar.png" alt="Confirmamos disponibilidad">
+        <div class="paso-icono">
+          <img src="assets/paso-confirmar.png" alt="Confirmamos disponibilidad">
+        </div>
         <h3>Confirmamos</h3>
         <p>Te confirmamos disponibilidad y el tamaño ideal.</p>
       </div>
 
       <div class="paso">
-        <img src="assets/paso-pago.png" alt="Realiza el pago">
+        <div class="paso-icono">
+          <img src="assets/paso-pago.png" alt="Realiza el pago">
+        </div>
         <h3>Realiza el pago</h3>
         <p>Te indicamos el medio de pago para continuar.</p>
       </div>
 
       <div class="paso">
-        <img src="assets/paso-entrega.png" alt="Coordinamos la entrega">
+        <div class="paso-icono">
+          <img src="assets/paso-entrega.png" alt="Coordinamos la entrega">
+        </div>
         <h3>Entrega</h3>
         <p>Coordinamos la entrega para que lo disfrutes.</p>
       </div>
