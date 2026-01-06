@@ -55,6 +55,12 @@
       background:var(--marron);
       color:#fff;
       font-weight:500;
+      transition:all 0.3s ease;
+    }
+
+    .btn:hover{
+      background:var(--marron-oscuro);
+      transform:translateY(-2px);
     }
 
     /* ---------- HERO ---------- */
@@ -150,158 +156,174 @@
       font-size:14px;
       opacity:.7;
     }
+    
     /* ---------- COMO COMPRAR ---------- */
-      .como-comprar {
-        text-align: center;
-      }
+    .como-comprar {
+      text-align: center;
+    }
       
-        .como-comprar .intro {
-        max-width: 520px;
-        margin: 0 auto 64px;
-        opacity: 0.85;
-        }
+    .como-comprar .intro {
+      max-width: 520px;
+      margin: 0 auto 64px;
+      opacity: 0.85;
+    }
       
-        .pasos {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 48px;
-        margin-top: 64px;
-        text-align: center;
-        }
+    .pasos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
+      margin-top: 64px;
+      text-align: center;
+    }
       
-        .paso img {
-        width: 120px;         
-        height: 120px;
-        object-fit: contain;
-        margin-bottom: 28px;
-
-  
-        transform: scale(1.8);
-        }  
+    .paso img {
+      width: 120px;         
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 28px;
+      transform: scale(1.8);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }  
+    
+    /* Estilo especial para el icono de WhatsApp (primer paso) */
+    .paso:first-child img:hover {
+      transform: scale(2) rotate(5deg);
+    }
       
-      .paso h3 {
-        font-size: 22px;
-        margin-bottom: 12px;
-      }
+    .paso h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
       
-      .paso p {
-        font-size: 15px;
-        opacity: 0.85;
-      }
+    .paso p {
+      font-size: 15px;
+      opacity: 0.85;
+    }
+    
     /* ---------- RESPONSIVE PASOS ---------- */
-@media (max-width: 900px) {
-  .pasos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 48px;
-  }
+    @media (max-width: 900px) {
+      .pasos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px;
+      }
 
-  .paso img {
-    width: 100px;
-    height: 100px;
-    transform: scale(1.3);
-  }
-}
+      .paso img {
+        width: 140px; /* Más grande en tablet */
+        height: 140px; /* Más grande en tablet */
+        transform: scale(2.2); /* Más grande en tablet */
+      }
+      
+      .paso:first-child img:hover {
+        transform: scale(2.4) rotate(5deg); /* Ajuste para hover en tablet */
+      }
+    }
 
-@media (max-width: 480px) {
-  .pasos {
-    grid-template-columns: 1fr;
-    gap: 56px;
-  }
+    @media (max-width: 480px) {
+      .pasos {
+        grid-template-columns: 1fr;
+        gap: 56px;
+      }
 
-  .paso img {
-    width: 96px;
-    height: 96px;
-    transform: scale(1.5);
-  }
-}
+      .paso img {
+        width: 160px; /* Más grande en móvil */
+        height: 160px; /* Más grande en móvil */
+        transform: scale(2.8); /* Más grande en móvil */
+      }
+      
+      .paso:first-child img:hover {
+        transform: scale(3.0) rotate(5deg); /* Ajuste para hover en móvil */
+      }
+    }
         
     /* ---------- CONTACTO ---------- */
-.contacto {
-  background: var(--beige);
-  padding: 120px 24px;
-  text-align: center;
-}
+    .contacto {
+      background: var(--beige);
+      padding: 120px 24px;
+      text-align: center;
+    }
 
-.contacto h2 {
-  font-size: 42px;
-  margin-bottom: 16px;
-}
+    .contacto h2 {
+      font-size: 42px;
+      margin-bottom: 16px;
+    }
 
-.divider {
-  display: block;
-  width: 60px;
-  height: 1px;
-  background: var(--marron);
-  margin: 0 auto 32px;
-  opacity: 0.4;
-}
+    .divider {
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: var(--marron);
+      margin: 0 auto 32px;
+      opacity: 0.4;
+    }
 
-.contacto-texto {
-  max-width: 520px;
-  margin: 0 auto 48px;
-  font-size: 16px;
-  color: var(--marron-oscuro);
-}
+    .contacto-texto {
+      max-width: 520px;
+      margin: 0 auto 48px;
+      font-size: 16px;
+      color: var(--marron-oscuro);
+    }
 
-.contacto-info {
-  margin-top: 48px;
-  font-size: 14px;
-  opacity: 0.7;
-  line-height: 1.8;
-}
+    .contacto-info {
+      margin-top: 48px;
+      font-size: 14px;
+      opacity: 0.7;
+      line-height: 1.8;
+    }
 
-/* Estilos para los enlaces de contacto */
-.contacto-info a {
-  transition: all 0.3s ease;
-}
+    /* Estilos para los enlaces de contacto */
+    .contacto-info a {
+      transition: all 0.3s ease;
+    }
 
-.contacto-info a:hover {
-  opacity: 1;
-  text-decoration: underline;
-  color: var(--marron);
-}
+    .contacto-info a:hover {
+      opacity: 1;
+      text-decoration: underline;
+      color: var(--marron);
+    }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .contacto {
-    padding: 80px 24px;
-  }
+    /* Mobile */
+    @media (max-width: 768px) {
+      .contacto {
+        padding: 80px 24px;
+      }
 
-  .contacto h2 {
-    font-size: 32px;
-  }
-}
+      .contacto h2 {
+        font-size: 32px;
+      }
+    }
 
-/* ---------- RESPONSIVE CONTACTO ---------- */
-@media (max-width: 480px) {
-  .contacto h2 {
-    font-size: 36px;
-  }
+    /* ---------- RESPONSIVE CONTACTO ---------- */
+    @media (max-width: 480px) {
+      .contacto h2 {
+        font-size: 36px;
+      }
 
-  .contacto-texto {
-    font-size: 16px;
-  }
+      .contacto-texto {
+        font-size: 16px;
+      }
 
-  .contacto-links {
-    flex-direction: column;
-    gap: 12px;
-  }
+      .contacto-links {
+        flex-direction: column;
+        gap: 12px;
+      }
 
-  .separator {
-    display: none;
-  }
-}
+      .separator {
+        display: none;
+      }
+    }
 
     /* ---------- RESPONSIVE ---------- */
     @media(max-width:768px){
       .hero-header nav{display:none}
       .hero-content h1{font-size:44px}
     }
+    
     .historia-grid{
-    display:grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap:48px;
-    align-items:center;
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap:48px;
+      align-items:center;
     }
 
     .historia-imagen img{
@@ -310,18 +332,19 @@
       border-radius:18px;
       object-fit:cover;
     }
+    
     @media(max-width:768px){
-  .historia-grid{
-    grid-template-columns: 1fr;
-    gap:32px;
-  }
+      .historia-grid{
+        grid-template-columns: 1fr;
+        gap:32px;
+      }
 
-  .historia-imagen img{
-    width:100%;
-    max-width:100%;
-    border-radius:20px;
-  }
-}
+      .historia-imagen img{
+        width:100%;
+        max-width:100%;
+        border-radius:20px;
+      }
+    }
   </style>
 </head>
 
@@ -420,12 +443,14 @@
   <section class="bg-crema" id="como-comprar">
   <div class="container">
     <h2>Cómo comprar</h2>
-    <p>Cuatro simples pasos para disfrutar de nuestro salame de chocolate artesanal.</p>
+    <p class="intro">Cuatro simples pasos para disfrutar de nuestro salame de chocolate artesanal.</p>
 
     <div class="pasos">
       <div class="paso">
-        <img src="assets/paso-whatsapp.png" alt="Escríbenos por WhatsApp">
-        <h3>Escríbenos</h3>
+        <a href="https://wa.me/3028428880" target="_blank">
+          <img src="assets/paso-whatsapp.png" alt="Escríbenos por WhatsApp">
+        </a>
+        <h3>Escíbenos</h3>
         <p>Contáctanos por WhatsApp y cuéntanos qué necesitas.</p>
       </div>
 
